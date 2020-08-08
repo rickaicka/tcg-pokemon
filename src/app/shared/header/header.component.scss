@@ -1,0 +1,16 @@
+@import 'functions';
+
+.header-tcg-pokemon{
+    background-color: $primary-red;
+    height: 60px;
+    position: fixed;
+    &__logo{
+        cursor: pointer;
+        & img{
+            width: 12%;
+        }
+        & h2{
+            @include textStyle(18px, $white, 500, unset);
+        }
+    }
+}

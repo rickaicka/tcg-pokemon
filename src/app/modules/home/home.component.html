@@ -1,0 +1,17 @@
+<div class="container-fluid home-tcg-pokemon">
+    <form [formGroup]="registerForm" (ngSubmit)="searchCard()">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" formControlName="pokemonName" placeholder="Pokemon Name" aria-label="Pokemon Name">
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary">Primary</button>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-md-12">
+            <tcg-card-pokemon [pokemons]="pokemons"></tcg-card-pokemon>
+        </div>
+    </div>
+</div>

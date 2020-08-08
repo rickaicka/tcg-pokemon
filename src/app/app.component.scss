@@ -1,0 +1,10 @@
+@import 'functions';
+.router-main{
+    margin-top: 6vw;
+    @media screen and (min-width: 1441px) {
+        margin-top: 4vw;
+    }
+    @media screen and (max-width: $mobile) {
+        margin-top: 23vw;
+    }
+}

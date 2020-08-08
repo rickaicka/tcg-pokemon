@@ -1,0 +1,72 @@
+$primary-gray: #f2f2f2;
+$second-gray: #686868;
+$white: #ffffff;
+$primary-yellow: #FECA1B;
+$primary-red: #EF5350;
+$primary-blue: #3761A8;
+$mobile: 430px;
+$mqDesk: 1441px;
+
+$colors:( 
+    'normal': #A9A878,
+    'colorless': #A9A878,
+    'fighting': rgb(226, 194, 192),
+    'flying': #A78FF0,
+    'poison': #9F40A1,
+    'ground': #DFBF68,
+    'rock': #B7A037,
+    'bug': #A8B821,
+    'ghost': #705698,
+    'steel': #B8B8D0,
+    'metal': #B8B8D0,
+    'fire': #F07F2F,
+    'water': #688FEF,
+    'grass': #78C84F,
+    'electric':#F8D030,
+    'lightning':#F8D030, 
+    'psychic': #F75787,
+    'ice': #98D8D8,
+    'dragon': #6F37F8,
+    'dark': #6E5747,
+    'darkness': #6E5747,
+    'fairy': #F7C9E3,
+    'unknown': #CCCCCC,
+    'shadow': #5A5366,
+    'trainer': #ABA6A2
+);
+
+$statsColor: (
+    'hp': #78C84F,
+    'attack': rgb(226, 194, 192),
+    'defense': #6F37F8,
+    'special-attack': #F75787,
+    'special-defense':#98D8D8,
+    'speed': #F8D030,
+    'accuracy': #B7A037,
+    'evasion': #A78FF0
+);
+
+@each $name, $color in $colors{
+    .#{ $name } {
+        background-color: $color;
+        @if $name == 'electric' {
+            color : $second-gray !important;
+        }@else if $name == 'fairy'{
+            color : $second-gray !important;
+        }
+    }
+}
+
+@each $name, $color in $colors{
+    .text-type-#{ $name } {
+        color: $color !important;
+    }
+}
+
+@each $name, $color in $statsColor{
+    .mat-type-stats-#{$name}{
+        .mat-progress-bar-fill::after {
+            background-color: $color !important;
+        }
+    }
+}

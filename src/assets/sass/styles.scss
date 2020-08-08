@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Raleway', sans-serif; }
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+/* CUSTOM SCSS FILES */
+@import "base/variables";
+@import "base/functions";

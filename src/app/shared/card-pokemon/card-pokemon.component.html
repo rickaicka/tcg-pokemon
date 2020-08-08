@@ -1,0 +1,27 @@
+<ul class="pokedex-list ml-0 mr-0 pl-2 pr-0">
+    <li *ngFor="let pok of pokemons" class="pokedex-list__item mb-4">
+        <app-type-pokemon *ngFor="let type of pok?.types;" [typePokemon]="type"></app-type-pokemon>
+        <span>{{ pok?.name }}</span>
+        <span>{{pok?.nationalPokedexNumber | number:'3.0-0'}}</span>
+        <img [src]="pok?.imageUrl" title="{{pok?.name}}">
+        <!-- <mat-card class="pokedex-list__item__card-pokemon mr-2 px-0 pb-3" [routerLink]="['/pokemon', pok?.name]">
+            <div class="pokedex-list__item__card-pokemon__header px-3">
+                <h3>{{ pok?.name }}</h3>
+                <app-type-pokemon *ngFor="let type of pok?.types;" [typePokemon]="type.type.name"></app-type-pokemon>
+            </div>
+            <div class="pokedex-list__item__card-pokemon__image">
+                <img mat-card-image [src]="pok?.sprite" alt="{{pok?.name}}">
+            </div>
+            <mat-card-content class="pokedex-list__item__card-pokemon__content">
+                <p class="text-center">
+                    <span>#</span> {{pok?.id | number:'3.0-0'}}
+                </p>
+            </mat-card-content>
+            <div class="pokedex-list__item__card-pokemon__details">
+                <button mat-mini-fab color="warn">
+                    <i class="material-icons">loupe</i>
+                </button>
+              </div>
+        </mat-card> -->
+    </li>
+</ul>
